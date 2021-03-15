@@ -1,0 +1,30 @@
+name: GithubAction CI-Test
+on: push
+
+jobs:
+  greet:
+    name: Print Greet
+    runs-on: ubuntu-latest
+    env:
+      MY_VAR: Hi there! My name is
+      FIRST_NAME: William
+      LAST_NAME: Huang
+      run: |
+        echo $MY_VAR $FIRST_NAME $LAST_NAME.
+
+  build:
+    name: Build Project
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "-----Build Project-----"
+          mvn compile
+
+  test:
+    name: Test Project
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "-----Test Begin-----"
+          mvn test

@@ -1,0 +1,1 @@
+class DifferentExp extends Exception { }//非同类项相加异常
