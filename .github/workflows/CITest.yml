@@ -2,22 +2,14 @@ name: GithubAction CI-Test
 on: push
 
 jobs:
-  greet:
-    name: Print Greet
-    runs-on: ubuntu-latest
-    env:
-      MY_VAR: Hi there! My name is
-      FIRST_NAME: William
-      LAST_NAME: Huang
-    steps:
-      - run: |
-        echo "$MY_VAR $FIRST_NAME $LAST_NAME"
-
   build:
     name: Build Project
     runs-on: ubuntu-latest
     steps:
       - run: |
+          java -version
+          javac -version
+          mvn -v
           echo "-----Build Project-----"
           mvn compile
 
