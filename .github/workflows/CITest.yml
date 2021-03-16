@@ -10,6 +10,7 @@ jobs:
           java -version
           javac -version
           mvn -v
+          mvn -B package --file pom.xml
           echo "-----Build Project-----"
           mvn compile
 
