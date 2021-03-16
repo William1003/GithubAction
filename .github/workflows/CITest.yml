@@ -11,7 +11,7 @@ jobs:
       LAST_NAME: Huang
     steps:
       - run: |
-        echo $MY_VAR $FIRST_NAME $LAST_NAME.
+        echo "$MY_VAR $FIRST_NAME $LAST_NAME"
 
   build:
     name: Build Project
