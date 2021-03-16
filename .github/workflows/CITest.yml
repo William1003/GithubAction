@@ -9,7 +9,8 @@ jobs:
       MY_VAR: Hi there! My name is
       FIRST_NAME: William
       LAST_NAME: Huang
-      run: |
+    steps:
+      - run: |
         echo $MY_VAR $FIRST_NAME $LAST_NAME.
 
   build:
